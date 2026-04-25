@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+*.ipynb
+
+# Data files (large — do NOT commit)
+data/raw/
+data/processed/
+*.npz
+*.npy
+*.joblib
+*.pkl
+*.parquet
+*.h5
+
+# Models
+models/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Ollama / LLM
+*.gguf
+*.ggml
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Env
+.env
+.env.local
