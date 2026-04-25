@@ -20,9 +20,9 @@ import pandas as pd
 import numpy as np
 
 from models.model_loader import load_all
-from app.services.hybrid        import HybridRecommenderSystem
-from app.services.mood_engine   import resolve_mood
-from app.services.explainability import (
+from services.hybrid        import HybridRecommenderSystem
+from services.mood_engine   import resolve_mood
+from services.explainability import (
     build_explanations, ollama_ready, send_to_ollama, WELLNESS_COPY,
 )
 
