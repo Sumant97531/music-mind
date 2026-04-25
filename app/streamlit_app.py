@@ -12,6 +12,9 @@ Ollama (optional local LLM):
 import sys
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.append(str(ROOT))
+
 # ROOT = Path(__file__).resolve().parent.parent
 # sys.path.insert(0, str(ROOT))
 
@@ -19,12 +22,14 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-from models.model_loader import load_all
-from services.hybrid        import HybridRecommenderSystem
-from services.mood_engine   import resolve_mood
-from services.explainability import (
-    build_explanations, ollama_ready, send_to_ollama, WELLNESS_COPY,
+from app.models.model_loader import load_all
+from app.services.hybrid import HybridRecommenderSystem
+from app.services.mood_engine import resolve_mood
+from app.services.explainability import (
+    build_explanations, ollama_ready, send_to_ollama, WELLNESS_COPY
 )
+
+
 
 # ── Page config (must be first Streamlit call) ────────────────────────────────
 st.set_page_config(
