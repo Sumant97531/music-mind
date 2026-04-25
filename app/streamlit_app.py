@@ -19,7 +19,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-from app.models.model_loader    import load_all
+from models.model_loader import load_all
 from app.services.hybrid        import HybridRecommenderSystem
 from app.services.mood_engine   import resolve_mood
 from app.services.explainability import (
