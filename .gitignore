@@ -1,7 +1,6 @@
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
 *.pyc
 
 # Virtual Environment
@@ -9,29 +8,17 @@ venv/
 env/
 .venv/
 
-# Jupyter / IPython
+# Jupyter
 .ipynb_checkpoints/
-*.ipynb
 
-# Data files (large — do NOT commit)
+# ── RAW data (too large for git) ──
 data/raw/
-data/processed/
-*.npz
-*.npy
-*.joblib
-*.pkl
-*.parquet
-*.h5
 
-# Models
-models/
+# ── KEEP processed files in git for Streamlit Cloud deployment ──
+# data/processed/   <-- DO NOT ignore this
 
-# Streamlit
-.streamlit/secrets.toml
-
-# Ollama / LLM
-*.gguf
-*.ggml
+# Models (transformer is large — keep if under 100MB)
+# models/
 
 # IDE
 .vscode/
